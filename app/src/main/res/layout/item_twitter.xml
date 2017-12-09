@@ -19,51 +19,46 @@
             android:src="@drawable/nasalogo"
             android:scaleType="fitCenter"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             />
-        <RelativeLayout
-            android:id="@+id/rl_profile_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/iv_profile"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="8dp"
-            >
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NASA"
                 android:textColor="@color/icons"
+                android:layout_toRightOf="@id/iv_profile"
+                android:layout_marginTop="8dp"
                 android:textSize="18sp"
                 android:drawableTint="@color/icons"
                 android:fontFamily="sans-serif"/>
             <ImageView
+                android:id="@+id/iv_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_check_circle_black_16dp"
-                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/tv_name"
+                android:layout_marginTop="16dp"
                 android:tint="@color/icons"
                 android:layout_toRightOf="@id/tv_name"/>
-        </RelativeLayout>
 
         <TextView
             android:id="@+id/tv_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\u0040NASA"
-            android:layout_toRightOf="@id/rl_profile_name"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_alignBottom="@id/tv_name"
             android:textColor="@color/primary_light"
             android:textSize="18sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="4dp"/>
+            android:layout_marginLeft="16dp"/>
         <TextView
             android:id="@+id/tv_time_ago"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\u00B7 1d"
             android:layout_toRightOf="@id/tv_location"
-            android:layout_marginTop="16dp"
+            android:layout_alignBottom="@id/tv_name"
             android:layout_marginLeft="4dp"
             android:textColor="@color/primary_light"
             android:textSize="18sp"
@@ -74,12 +69,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=".@SpadeX is now tageting no earlier than Dec. 12 at 11.46am ET for the next cargo lunch to @Space_Station. Details: go.nasa.gov/2ksFGeM"
-            android:layout_alignLeft="@id/rl_profile_name"
-            android:layout_below="@id/rl_profile_name"
-            android:layout_marginTop="8dp"
+            android:layout_alignLeft="@id/tv_name"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="36dp"
             android:textSize="14sp"
             android:textColor="@color/icons"
-            android:layout_marginRight="36dp"
             android:lineSpacingMultiplier="1"
             android:maxLines="4"
             android:ellipsize="end"/>
@@ -98,14 +93,14 @@
             android:layout_height="wrap_content"
             android:src="@drawable/spacex"
             android:layout_below="@id/tv_post_brief"
-            android:layout_alignLeft="@id/rl_profile_name"
+            android:layout_alignLeft="@id/tv_name"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"/>
         <LinearLayout
             android:id="@+id/fl_post_stastics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/rl_profile_name"
+            android:layout_alignLeft="@id/tv_name"
             android:layout_below="@id/iv_post_img"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
